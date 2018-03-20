@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS复习-prototype</title>
+</head>
+<body>
+    <b>prototype：允许我们向对象的原型添加新的属性或者方法</b>
+    <script>
+        Array.prototype.sum = function () {
+            var t = 0;
+            for (var i = 0; i < this.length; i++) {
+                t += this[i];
+            }
+            return t;
+        }
+
+        var arr = [456, 12, 30];
+        console.log(arr.sum());
+    </script>
+</body>
+</html

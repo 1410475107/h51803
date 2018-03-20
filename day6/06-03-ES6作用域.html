@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06-00-ES6基本概念</title>
+</head>
+<body>
+    <script>
+        //ES5:全局变量、局部变量
+        {
+            var b = 10;    
+        }
+        console.log(b); //打印出来  10
+
+        //ES6:块级作用域
+        {
+            //这里用let声明的变量的作用域只在当前代码块里面，外面不可以使用
+            let a = 20;
+            console.log(a);
+            //好处：不会污染全局变量。其他地方也有可能定义了这个变量，如果没有作用域限制，很容易造成变量覆盖（变量污染）；ES5里面的匿名函数启到同样效果；
+        }
+        console.log(a); //这里用不了
+        
+
+
+    </script>
+
+</body>
+</html>

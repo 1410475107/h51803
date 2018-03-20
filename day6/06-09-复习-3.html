@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS复习-变量的声明和赋值</title>
+</head>
+<body>
+    <b>变量的声明和赋值</b>
+    <ul>
+        <li>变量的声明：var 变量名称;</li>
+        <li>变量名称要使用字母、数字、下划线、$，变量不能以数字开头；</li>
+        <li>变量的赋值：str = 'hello world!';</li>
+        <li>定义变量的时候不能使用 关键字（保留字）；</li>
+        <li>我们在定义变量的时候要做到  见名知意；</li>
+    </ul>
+
+    <b>变量的类型</b>
+    <ul>
+        <li>数字：Number, parseInt(), parseFloat(), Math, isNaN</li>
+        <li>字符串：单引号或者双引号定义个字符串，一般使用单引号；String , 连接使用+</li>
+        <li>数组：Array，长度，数组截取、删除元素、添加元素、 for...in、for...of</li>
+        <li>对象：{键:值,键:值,键:值,键:值,键:值,键:值}，获取对象元素的值的方式：对象.键 、 对象['键']</li>
+        <li>boolean、undefined、null</li>
+        <li>JSON格式：[{}, {}, {}],数组和对象可以相互嵌套很多层；</li>
+    </ul>
+
+
+    <script>
+        function num123e (a, b) {
+            return b-a;
+        }
+        var arr = [1, 23, 4, 56, 90, 20, 40, 26];
+        arr.sort(num123e);
+        console.log(arr);
+        
+
+
+    </script>
+</body>
+</html>

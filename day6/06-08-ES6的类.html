@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06-07-箭头函数</title>
+</head>
+<body>
+    <div class="cl"></div>
+    <script>
+        //自定义方法劫持
+        //ES6里面如何定义一个类：ES6里面的类才是真正的类
+        class Person{
+            //构造函数：实例化一个对象的时候，构造函数默认会执行;\
+            constructor(name, age, sex){
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+                // console.log('我是' + this.name + '，性别' + this.sex + '，年龄'+this.age+'岁');
+            }
+            // this.showname = showName;
+            showName(){
+                console.log(this.name);
+            }
+            changeName(newname){
+                this.name = newname;
+            }
+        }
+
+        var p1 = new Person('赵久帅', 20, '男');
+        p1.showName();
+        p1.changeName('赵琳');
+        p1.showName();
+
+        //类的继承
+        class itboy extends Person{
+            // Person.apply(this);
+            constructor(name, age, sex, coder){
+                //劫持父级构造函数:call,不是apply
+                super(name, age, sex);
+                this.coder = coder;
+            }
+            myCode(){
+                console.log(this.coder);
+            }
+            showName(){
+                //super();
+                console.log('我是' + this.name);
+            }
+        }
+
+        var b1 = new itboy('赵久帅', 20, '男', 'JAVA');
+        b1.myCode();
+        b1.showName(); //优先使用子类里面的方法
+        
+    </script>
+</body>
+</html>

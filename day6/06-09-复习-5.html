@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS复习-函数</title>
+</head>
+<body>
+    <b>函数</b>
+    function 函数名(形参, 形参2...){
+        代码块;
+        return 返回值;
+        return 后面的代码不会执行;
+    }
+    <br>
+    <b>匿名函数：</b>
+    function(){
+        匿名函数的主题;
+    }
+    直接定义一个匿名函数会报错，要用()包含起来；
+    如果要执行这个匿名函数，在后面加上()；
+    <br>
+    <b>表达式函数：</b>
+    var 变量= function(){
+        匿名函数的主题;
+    }
+    变量(); //执行表达式函数
+    <br>
+    <b>函数的参数：</b>
+    <ul>
+        <li>如果实参多与形参，多出的部分没用；</li>
+        <li>如果实参少于形参，没有得到实参的形参是undefined；</li>
+        <li>所有的实参都放在arguments；</li>
+        <li></li>
+    </ul>
+  
+    <script>
+    function fn (a, b) {
+        console.log(arguments);
+        //也可以使用循环的方式把每个元素放到新的数组里面
+        // arguments是类数组，并不是真正的数组
+        arguments = [...arguments];
+        arguments.push(888);
+        console.log(arguments);
+        return a + b;
+    }
+
+    fn(1, 2, 3, 6);
+
+    (function () {
+        /* body... */
+        console.log(1);
+    })
+
+    var  fn1 = function () {
+        /* body... */
+        console.log(1);
+    }
+    fn1();
+    </script>
+
+</body>
+</html>

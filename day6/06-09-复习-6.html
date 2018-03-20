@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS复习-作用域</title>
+</head>
+<body>
+    <b>变量的作用域</b>
+    <ul>
+        <li>全局变量：在页面关闭是结束声明周期；</li>
+        <li>局部变量：在函数内部声明的变量；</li>
+        <li>变量的提升：只提升变量的声明，不提升赋值；</li>
+        <li>函数里面声明的变量如果不加var则是全局变量；</li>
+    </ul>
+  
+    <script>
+        var a = 1;
+        fn();
+        console.log(b); //25
+        var b = 20;
+        function fn () {
+            console.log(a); // 1  
+            a = 30;
+            console.log(a); //30
+            b = 25;
+            console.log(b); //25
+        }
+        console.log(a); //30
+        console.log(b); //20  
+    </script>
+</body>
+</html>

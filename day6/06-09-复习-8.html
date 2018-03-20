@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS复习-对象</title>
+</head>
+<body>
+    <b>对象：是属性和方法的集合；</b>
+
+    <script>
+    var obj = {
+        name:'刘文霞',
+        age:20,
+        talk:function () {
+            console.log(this.name);
+        }
+    }
+    obj.talk();
+
+    // this:谁调用这个方法，this就指向谁
+    // 
+    function Person (name, age, sex) {
+        // body... 
+        this.name456    = name;
+        this.talk       = talk;
+        this.__setName  = __setName;
+        function talk (argument) {
+            console.log(this.name456);
+        }
+        function __setName (newname) {
+            // body... 
+            this.name456 = newname;
+        }
+    }
+    
+    var p1 = new Person('古吉密', 20, '女');
+    p1.talk();
+
+    p1.__setName('熊倩');
+    p1.talk();
+
+    </script>
+  
+</body>
+</html

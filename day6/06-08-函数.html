@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06-07-箭头函数</title>
+    <style>
+        .cl{
+            width: 200px;
+            height: 200px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="cl"></div>
+    <script>
+      
+      // document.querySelector('.cl').onclick = function () {
+      //      body... 
+      //     this.style.backgroundColor = 'red';
+      // }
+      // 
+        var obj = document.querySelector('.cl');
+            obj.onclick = ()=>{
+            console.log(this);
+            //这里的this指向window
+            obj.style.backgroundColor = 'red';
+        }
+
+        //定义一个箭头函数
+        /*
+        函数名称=(形参)=>{
+            函数体;
+        }
+        */
+        showname=(myname)=>{
+            console.log(myname);
+        }
+
+      showname('周小朝');
+
+    </script>
+</body>
+</html>

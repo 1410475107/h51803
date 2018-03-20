@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06-06-数组操作</title>
+</head>
+<body>
+    <script>
+       var arr1 = [1, 2, 3, 4, 5];
+       //循环出来的是下标
+       for (var x in arr1) {
+           console.log(x);
+       }
+
+       //直接循环值
+       for(var x of arr1){
+            console.log(x);
+       }
+
+       //for...of 的方式不支持遍历对象
+       // var obj = {username:'闫芯雨', age:20, sex:'女'};
+       // for(var i of obj){
+       //      console.log(i);
+       // }
+       // 
+       
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06-02-ES6解构赋值</title>
+</head>
+<body>
+    <script>
+        // ES5：var a=1, b = 2, c=3;
+        // ES6如何创建多个变量
+        let [a, b, c] = [1, 2, 3];
+        console.log(a, b, c);
+
+        //根据键值,对象方式的解构赋值是根据键值赋值的，不关心顺序
+        let {d, e, f} = {f:30, d:10, e:20}
+        console.log(f);
+
+        //如何混合的方式解构赋值
+        let [{g, h}, [i, j], {p, q}, k] = [{h:12, g:13}, [10, 30], {p:2, q:9}, 20];
+        console.log(j);
+        console.log(h);
+        console.log(k);
+
+    </script>
+
+</body>
+</html>
